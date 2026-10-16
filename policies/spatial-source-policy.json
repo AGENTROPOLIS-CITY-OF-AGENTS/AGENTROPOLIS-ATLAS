@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "capability": "spatial-intelligence",
+  "principles": {
+    "evidence_not_authority": true,
+    "source_provenance_required": true,
+    "license_metadata_required_when_known": true,
+    "person_tracking_allowed": false,
+    "biometric_identification_allowed": false,
+    "named_person_search_allowed": false
+  },
+  "required_source_fields": [
+    "id",
+    "name",
+    "observedAt",
+    "state",
+    "confidence"
+  ],
+  "states": ["live", "degraded", "stale", "unavailable"],
+  "confidence": ["verified", "high", "medium", "low", "unknown"],
+  "promotion_path": [
+    "ATLAS_NORMALIZE",
+    "ONTOLOGY_BIND",
+    "ATG_COMPILE",
+    "EXECUTION_ENVELOPE",
+    "AEGIS_GATE",
+    "ADAPTER_EXECUTE",
+    "RECEIPT_AUDIT"
+  ]
+}
